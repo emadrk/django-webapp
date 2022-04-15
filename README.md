@@ -1,13 +1,45 @@
-# tahoe- URL generator application
+# URL generator application
 
-### geturl is django project
+### This project enables users to upload any image and in return users will get url of the image
 
-### url generator is app where templates and views will be found.
+### Project Detail:
+1. User uploads an image and get url of image in webpage.
 
-### api is app where wrapper api is written to communicate with appspot api.
+2. Google auth is incorporated in frontend.
 
-How to run it on docker locally:
-1. Build container from tahoe directory
+3. When user uploads image, the image is wrapped up in body of POST API and POST API return url is user is authenticated.
+
+3. API is also authenticated. Calling API from Postman won't work.
+
+2. Backend API is authenticated, So only users who are logged in can only get url.
+
+
+## Running the application on Local Machine:
+1. From magicurl directory, Create Virtual Environment
+```shell
+python3 -m venv [name_of_virtual_env]
+```
+
+2. Install dependencies
+```shell
+pip install -r requirements.txt
+```
+
+3. Activate virtual environment
+```shell
+source venv/bin/activate
+```
+
+4. Run the application
+```shell
+python3 manage.py runserver --insecure
+```
+
+
+
+
+## Running on local machine through docker:
+1. Build container from magicurl directory
 
 ```shell
 docker build . -t django-dev

@@ -15,7 +15,7 @@
 
 
 ## Running the application on Local Machine:
-1. From magicurl directory, Create Virtual Environment
+1. From django-webapp directory, Create Virtual Environment
 ```shell
 python3 -m venv [name_of_virtual_env]
 ```
@@ -39,14 +39,14 @@ python3 manage.py runserver --insecure
 
 
 ## Running on local machine through docker:
-1. Build container from magicurl directory
+1. Build container from django-webapp directory
 
 ```shell
 docker build . -t django-dev
 ```     
 
 
-2. Run command from tahoe directory
+2. Run command from django-webapp directory
  
 ```shell
 docker run -p 8083:8000 -it --rm django-dev
